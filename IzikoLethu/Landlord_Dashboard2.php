@@ -1,13 +1,10 @@
 <?php
 session_start();
 
-$full_name = '';
-
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = ""; 
 $dbname = "izikolethu";
-
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 if ($conn->connect_error) {
@@ -26,14 +23,13 @@ $stmt->bind_param("s", $landlord_email);
 $stmt->execute();
 $result = $stmt->get_result();
 
-$full_name = $landlord['full_name'];
-
 if ($result->num_rows === 0) {
     die("Error: Landlord not found.");
 }
 
 $landlord = $result->fetch_assoc();
 $landlord_id = $landlord['landlord_id'];
+$full_name = $landlord['full_name'];
 $stmt->close();
 
 $sql_properties = "SELECT * FROM properties WHERE landlord_id = ?";
@@ -162,3 +158,4 @@ $conn->close();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
