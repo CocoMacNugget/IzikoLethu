@@ -40,7 +40,7 @@ if (isset($_SESSION['error'])) {
     <header class="text-center py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="fw-bold fs-4">
-                <a href="HomePage.html"><img src="images/default.png" class="logo"></a>
+                <a href="index.html"><img src="images/default.png" class="logo"></a>
             </div>
         </div>
     </header>
