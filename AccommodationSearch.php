@@ -92,7 +92,7 @@ $conn->close();
     <header class="text-center py-3" id="header">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="fw-bold fs-4">
-                <a href="HomePage.html"><img src="images/default.png" class="logo"></a>
+                <a href="index.html"><img src="images/default.png" class="logo"></a>
             </div>
             <form action="logout.php" method="post">
                 <button type="submit" class="btn btn-ghost">Logout</button>
